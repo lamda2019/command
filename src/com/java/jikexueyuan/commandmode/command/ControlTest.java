@@ -15,18 +15,21 @@ public class ControlTest {
 		Stereo stereo = new Stereo();
 		
 		
-		
+		//实例化各个房间里的开关状态
 		LightOnCommand bedroomlighton = new LightOnCommand(bedroomlight);
 		LightOffCommand bedroomlightoff = new LightOffCommand(bedroomlight);
 		LightOnCommand kitchlighton = new LightOnCommand(kitchlight);
 		LightOffCommand kitchlightoff = new LightOffCommand(kitchlight);
 
+		//开关各放队列中
 		 Command[] oncommands={bedroomlighton,kitchlighton};
 		 Command[] offcommands={bedroomlightoff,kitchlightoff};
-			
+
+		//批量操作开关
 		onmarco=new MarcoCommand(oncommands);
 		offmarco=new MarcoCommand(offcommands);
-		
+
+		//音响操作
 		StereoOnCommand stereoOn = new StereoOnCommand(stereo);
 		StereoOffCommand stereoOff = new StereoOffCommand(stereo);
 		StereoAddVolCommand stereoaddvol = new StereoAddVolCommand(stereo);

@@ -16,9 +16,8 @@ public class CommandModeControl implements Control{
 		 offCommands=new Command[5];
 		
 		 Command noCommand=new NoCommand();
-		 
-		 for(int i=0,len=onCommands.length;i<len;i++)
-		 {
+		 //初始化
+		 for(int i=0,len=onCommands.length;i<len;i++) {
 			 onCommands[i]=noCommand;
 			 offCommands[i]=noCommand;
 		 }
